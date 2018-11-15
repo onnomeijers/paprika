@@ -1,0 +1,2 @@
+ALTER TABLE processes_actions ADD CONSTRAINT pan_pcs_fk FOREIGN KEY (pcs_id) REFERENCES processes (id);
+ALTER TABLE processes_actions ADD CONSTRAINT pan_dan_fk FOREIGN KEY (dan_id) REFERENCES process_definitions_actions (id);

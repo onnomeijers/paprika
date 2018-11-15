@@ -1,0 +1,1 @@
+alter table actions add constraint acn_agp_fk FOREIGN KEY (agp_id) REFERENCES action_groups (id);

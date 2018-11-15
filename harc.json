@@ -1,0 +1,28 @@
+{
+  "projects": [
+    {
+      "name": "paprika",
+      "repository": "https://{0}:'{1}'@https://github.com/oxymabv/paprika.git",
+      "technology": "python"
+    }
+  ],
+  "dev": [
+    {
+      "name": "paprika",
+      "server": "http://localhost:5001"
+    }
+  ],
+  "test": [
+    {
+      "name": "paprika",
+      "server": ""
+    }
+  ],
+  "uat": [
+    {
+      "name": "paprika",
+      "server": ""
+    }
+  ]
+}
+

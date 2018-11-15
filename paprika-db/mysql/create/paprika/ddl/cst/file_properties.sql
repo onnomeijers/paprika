@@ -1,0 +1,1 @@
+alter table file_properties add constraint fpy_fle_fk foreign key (fle_id) references files (id);

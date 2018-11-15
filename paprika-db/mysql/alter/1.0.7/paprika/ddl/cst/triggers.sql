@@ -1,0 +1,1 @@
+alter table triggers add constraint tgr_tte_fk FOREIGN KEY (tte_id) REFERENCES trigger_types (id);

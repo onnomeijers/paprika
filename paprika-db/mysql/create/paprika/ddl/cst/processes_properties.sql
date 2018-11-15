@@ -1,0 +1,1 @@
+ALTER TABLE processes_properties ADD CONSTRAINT ppy_pcs_fk FOREIGN KEY (pcs_id) REFERENCES processes (id);

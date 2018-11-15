@@ -1,0 +1,1 @@
+ALTER TABLE process_definitions_actions ADD CONSTRAINT dan_pdn_fk FOREIGN KEY (pdn_id) REFERENCES process_definitions (id);

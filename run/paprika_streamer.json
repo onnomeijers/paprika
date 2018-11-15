@@ -1,0 +1,8 @@
+{
+  "agent_name" : "paprika_streamer",
+  "pool_size" : 1,
+  "watcher_idle_delay" : 1,
+  "worker_idle_delay" : 1,
+  "worker_exception_delay" : 1,
+  "agent_idle_delay" : 1
+}

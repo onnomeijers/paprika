@@ -1,0 +1,1 @@
+alter table action_groups add constraint agp_tte_fk FOREIGN KEY (tte_id) REFERENCES trigger_types (id);

@@ -1,0 +1,1 @@
+create index agp_tte_id_idx ON action_groups (tte_id);

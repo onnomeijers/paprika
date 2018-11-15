@@ -1,0 +1,15 @@
+insert into actions (name, value, type) values ('events.purgeLog', 'paprika.actions.events.PurgeLog.PurgeLog', 'action');
+insert into actions (name, value, type) values ('events.state', 'paprika.actions.events.State.State', 'action');
+insert into actions (name, value, type) values ('files.copy', 'paprika.actions.files.Copy.Copy', 'action');
+insert into actions (name, value, type) values ('files.oracle.monitor', 'paprika.actions.files.oracle.Monitor.Monitor', 'action');
+insert into actions (name, value, type) values ('files.oracle.schedule', 'paprika.actions.files.oracle.Schedule.Schedule', 'action');
+insert into actions (name, value, type) values ('files.pipe', 'paprika.actions.files.Pipe.Pipe', 'action');
+insert into actions (name, value, type) values ('files.property', 'paprika.actions.files.Property.Property', 'action');
+insert into actions (name, value, type) values ('files.state', 'paprika.actions.files.State.State', 'action');
+insert into actions (name, value, type) values ('hooks.payloadState', 'paprika.actions.hooks.PayloadState.PayloadState', 'action');
+insert into actions (name, value, type) values ('hooks.state', 'paprika.actions.hooks.State.State', 'action');
+insert into actions (name, value, type, properties) values ('oracle.call', 'paprika.actions.oracle.Call.Call', 'action','[{"name":"datasource", "value":""},{"name":"method_name", "value":""},{"name":"params", "value":""}]');
+insert into actions (name, value, type, properties) values ('hook', 'hook', 'agent','[{"name":"datasource", "value":""},{"name":"tablename", "value":""},{"name":"selector", "value":""},{"name":"options", "value":""},{"name":"rules", "value":""}]');
+insert into actions (name, value, type, properties) values ('scheduler', 'scheduler', 'agent','[{"name":"repetition", "value":""},{"name":"intermission", "value":""}]');
+insert into actions (name, value, type) values ('scanner', 'scanner', 'agent');
+insert into actions (name, value, type) values ('streamer', 'streamer', 'agent');

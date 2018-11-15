@@ -1,0 +1,1 @@
+CREATE INDEX dan_pdn_id_idx ON process_definitions_actions (pdn_id);

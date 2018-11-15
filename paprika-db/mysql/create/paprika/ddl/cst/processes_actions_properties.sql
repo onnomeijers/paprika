@@ -1,0 +1,1 @@
+ALTER TABLE processes_actions_properties ADD CONSTRAINT pay_pan_fk FOREIGN KEY (pan_id) REFERENCES processes_actions (id);

@@ -1,0 +1,1 @@
+CREATE INDEX flw_name_idx ON flows (name);

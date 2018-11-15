@@ -1,0 +1,1 @@
+CREATE INDEX evt_pcs_id_idx ON events (pcs_id);

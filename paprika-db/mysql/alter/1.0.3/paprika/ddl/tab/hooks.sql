@@ -1,0 +1,2 @@
+ALTER TABLE hooks ADD updater VARCHAR(4000);
+ALTER TABLE hooks ADD name VARCHAR(255);

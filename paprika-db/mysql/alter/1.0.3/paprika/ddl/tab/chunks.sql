@@ -1,0 +1,1 @@
+ALTER TABLE chunks ADD updater VARCHAR(4000);

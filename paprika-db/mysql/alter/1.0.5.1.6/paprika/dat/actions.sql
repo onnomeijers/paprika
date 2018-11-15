@@ -1,0 +1,4 @@
+insert into actions (name, value, type) values ('events.purgeChunks', 'paprika.actions.events.PurgeChunks.PurgeChunks', 'action');
+insert into actions (name, value, type) values ('events.purgeMessages', 'paprika.actions.events.PurgeMessages.PurgeMessages', 'action');
+insert into actions (name, value, type) values ('events.purgeProcessesActionsProperties', 'paprika.actions.events.PurgeProcessesActionsProperties.PurgeProcessesActionsProperties', 'action');
+insert into actions (name, value, type) values ('events.purgeProcessesProperties', 'paprika.actions.events.PurgeProcessesProperties.PurgeProcessesProperties', 'action');

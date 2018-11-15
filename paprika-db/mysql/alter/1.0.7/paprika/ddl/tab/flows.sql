@@ -1,0 +1,1 @@
+alter table flows add tte_id int(11);

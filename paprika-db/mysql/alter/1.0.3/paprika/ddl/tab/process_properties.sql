@@ -1,0 +1,1 @@
+ALTER TABLE processes_properties MODIFY COLUMN value mediumtext;

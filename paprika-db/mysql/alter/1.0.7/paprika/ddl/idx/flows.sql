@@ -1,0 +1,1 @@
+CREATE INDEX flw_tte_id_idx ON flows (tte_id);

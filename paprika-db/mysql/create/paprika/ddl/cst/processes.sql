@@ -1,0 +1,2 @@
+ALTER TABLE processes ADD CONSTRAINT pcs_pdn_fk FOREIGN KEY (pdn_id) REFERENCES process_definitions (id);
+ALTER TABLE processes ADD CONSTRAINT pcs_e_pdn_fk FOREIGN KEY (e_pdn_id) REFERENCES process_definitions (id);

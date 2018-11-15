@@ -1,0 +1,49 @@
+# minishift, run openshift on your local machine.
+https://fedoramagazine.org/run-openshift-locally-minishift/
+
+Fedora Modularity
+Building a modular operating system with multiple versions of components on different lifecycles.
+for testing.
+https://fedoramagazine.org/testing-modules-containers-modularity-testing-framework/
+
+Kubernetes
+Scaling docker (pods)
+https://fedoramagazine.org/introduction-kubernetes-fedora/
+
+webgl
+https://treejs.org
+http://voxeljs.com
+
+Python and Docker, an example
+https://glyph.twistedmatrix.com/2015/03/docker-deploy-double-dutch.html
+
+
+Flask login
+https://flask-login.readthedocs.io/en/latest/
+A method for (safe) user authorization.
+
+Flask login examples
+https://github.com/shekhargulati/flask-login-openshift-quickstart/blob/master/wsgi/todoapp.py
+https://blog.openshift.com/use-flask-login-to-add-user-authentication-to-your-python-application/
+
+
+
+Flask cors, allow cross origin
+https://codybonney.com/allow-cross-origin-resource-sharing-cors-using-flask/
+http://flask-cors.corydolphin.com/en/latest/api.html?highlight=origin#flask_cors.cross_origin
+
+
+Bootstrap components
+https://v4-alpha.getbootstrap.com/components/card/
+https://www.npmjs.com/package/jquery.flowchart
+http://www.patternfly.org/pattern-library/data-visualization/donut-chart/#/code
+
+
+IBM marketing cloud interface
+https://developer.ibm.com/customer-engagement/docs/watson-marketing/ibm-engage-2/watson-campaign-automation-platform/soap-api/list-management/
+
+Amazon (S3)
+Boto3 for python, should do the trick
+https://boto3.readthedocs.io/en/latest/guide/quickstart.html
+
+

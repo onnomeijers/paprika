@@ -1,0 +1,2 @@
+ALTER TABLE scheduled_events ADD CONSTRAINT set_pdn_fk FOREIGN KEY (pdn_id) REFERENCES process_definitions (id);
+ALTER TABLE scheduled_events ADD CONSTRAINT set_e_pdn_fk FOREIGN KEY (e_pdn_id) REFERENCES process_definitions (id);

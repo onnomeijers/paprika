@@ -1,0 +1,1 @@
+create index tgr_tte_id_idx ON triggers (tte_id);

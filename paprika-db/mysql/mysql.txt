@@ -1,0 +1,21 @@
+msstart mysql service on linux (mariadb)
+$ su - root
+$ systemctl start mysqld.service
+
+CentOS7:
+
+
+change mysql root password
+$ mysql -u root
+mysql> use mysql;
+mysql> update user set password=PASSWORD("new-password") where user='root';
+mysql> flush privileges;
+mysql> exit
+
+
+create user apps and grant all privileges
+$ mysql --user=root --password=[password]
+mysql> CREATE USER 'apple'@'localhost' IDENTIFIED BY 'peer';
+mysql> GRANT ALL PRIVILEGES ON * . * TO 'apple'@'localhost';
+mysql> flush privileges;
+mysql> exit

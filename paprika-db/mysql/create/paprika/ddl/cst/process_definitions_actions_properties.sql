@@ -1,0 +1,1 @@
+ALTER TABLE process_definitions_actions_properties ADD CONSTRAINT apy_dan_fk FOREIGN KEY (dan_id) REFERENCES process_definitions_actions (id);
