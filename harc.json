@@ -2,7 +2,7 @@
   "projects": [
     {
       "name": "paprika",
-      "repository": "https://{0}:'{1}'@https://github.com/oxymabv/paprika.git",
+      "repository": "https://{0}:'{1}'@github.com/oxymabv/paprika.git",
       "technology": "python"
     }
   ],
