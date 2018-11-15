@@ -1,4 +1,4 @@
-__version__ = '1.0.1'
+__version__ = '1.0.2-SNAPSHOT'
 
 __title__ = 'paprika'
 __description__ = 'Paprika a framework for developing (near) real-time marketing solutions.'
