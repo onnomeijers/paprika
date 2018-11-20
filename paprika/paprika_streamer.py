@@ -14,7 +14,7 @@ import os
 
 def main(args=None):
     # Instantiate the parser
-    parser = argparse.ArgumentParser(description="paprika-hook agent")
+    parser = argparse.ArgumentParser(description="paprika-streamer agent")
     parser.add_argument('-v', action='store_true', help='show the version')
 
     args = parser.parse_args(args)
@@ -39,6 +39,7 @@ def main(args=None):
     except:
         threads.terminate()
         threads.abort()
+
 
 if __name__ == "__main__":
     main(args=None)
