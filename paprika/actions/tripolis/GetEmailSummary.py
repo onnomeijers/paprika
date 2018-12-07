@@ -58,7 +58,7 @@ class GetEmailSummary(Actionable):
             raise ProcessException(message)
 
         if numberOfSkipped != 0:
-            message = "numberOfSkipped : " + numberOfSkipped + ", reason : the email is not send but skipped. Possibly emailadress empty?"
+            message = "numberOfSkipped : " + str(numberOfSkipped) + ", reason : the email is not send but skipped. Possibly emailadress empty?"
             raise ProcessException(message)
 
         if not status == 'ENDED':
