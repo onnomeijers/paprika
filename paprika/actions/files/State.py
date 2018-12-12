@@ -29,6 +29,11 @@ class State(Actionable):
         filename = file['filename']
 
         state = process_action_property_repository.get_property(process_action, 'state')
+        if not state:
+            state = process_property_repository.get_property(process, 'state')
+            if not state:
+                state = 'ERROR_NO_STATE'
+
         file['state'] = state
         file['message'] = message
         file['backtrace'] = backtrace

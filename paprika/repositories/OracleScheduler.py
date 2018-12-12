@@ -88,7 +88,7 @@ class OracleScheduler(Repository):
 
     def action(self, message):
         params = message['params']
-        test_result_params = message['test_result_params']
+        test_result_params = message.get('test_result_params')
         object_type = self.object_type(message['method_name'])
         declarations = 'declare '
         returns = ''

@@ -35,7 +35,7 @@ class Schedule(Actionable):
         datasource = process_action_property_repository.get_property(process_action, 'datasource')
         method_name = process_action_property_repository.get_property(process_action, 'method_name')
         params = process_action_property_repository.get_property(process_action, 'params')
-        test_result_params = json.loads(process_action_property_repository.get_property(process_action, 'test_result_params'))
+        test_result_params = process_action_property_repository.get_property(process_action, 'test_result_params')
         if params:
             params = json.loads(params)
             params = ExpressionParser.parse(params, locals())
@@ -50,8 +50,8 @@ class Schedule(Actionable):
         message['method_name'] = method_name
         message['identifier'] = identifier
         message['params'] = params
-        if message['test_result_params']:
-            message['test_result_params'] = test_result_params
+        if test_result_params:
+            message['test_result_params'] = json.loads(test_result_params)
         scheduler.create_job(message)
 
         logger.info(job_name, json.dumps(message))
