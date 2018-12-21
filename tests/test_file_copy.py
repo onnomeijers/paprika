@@ -10,6 +10,7 @@ from paprika.repositories.ProcessRepository import ProcessRepository
 from paprika.actions.files.Copy import Copy
 from paprika.repositories.EventRepository import EventRepository
 
+
 class TestCall(unittest.TestCase):
     def setUp(self):
         pass

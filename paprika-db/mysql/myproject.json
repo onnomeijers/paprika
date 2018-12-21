@@ -5,7 +5,7 @@
   "aliasses": ["paprika_test","paprika_uat","paprika_web"],
   "database_aliases" : [["paprika_test", "paprika"], ["paprika_uat", "paprika"],["paprika_web", "paprika"]],
   "mysql_users": [
-    ["localhost","paprika","apple","peer"],["localhost","paprika_test","apple","peer"],["localhost","paprika_uat","apple","peer"],["localhost","paprika_web","apple","peer"]
+    ["localhost","paprika","apps","apps"],["localhost","paprika_test","apple","peer"],["localhost","paprika_uat","apple","peer"],["localhost","paprika_web","apple","peer"]
   ],
   "default_environment": "dev",
   "mysql_hosts": [
