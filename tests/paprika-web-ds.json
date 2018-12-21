@@ -1,7 +1,0 @@
-{
-    "type" : "mysql",
-    "host" : "localhost",
-    "db" : "paprika_web",
-    "username" : "apple",
-    "password" : "peer"
-}
