@@ -3,8 +3,8 @@ from flask_restful import Resource, Api
 from flask_restful import abort
 from gevent.wsgi import WSGIServer
 from paprika.system.logger.Logger import Logger
-from paprika.connectors.DatasourceBuilder import DatasourceBuilder
-from paprika.connectors.ConnectorFactory import ConnectorFactory
+from paprika_connector.connectors.DatasourceBuilder import DatasourceBuilder
+from paprika_connector.connectors.ConnectorFactory import ConnectorFactory
 from paprika.system.Traceback import Traceback
 
 app = Flask(__name__)

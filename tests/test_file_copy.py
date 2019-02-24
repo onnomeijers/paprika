@@ -1,7 +1,7 @@
 import json
 import unittest
-from paprika.connectors.ConnectorFactory import ConnectorFactory
-from paprika.connectors.DatasourceBuilder import DatasourceBuilder
+from paprika_connector.connectors.ConnectorFactory import ConnectorFactory
+from paprika_connector.connectors.DatasourceBuilder import DatasourceBuilder
 from paprika.repositories.JobRepository import JobRepository
 from paprika.repositories.ProcessActionPropertyRepository import ProcessActionPropertyRepository
 from paprika.repositories.ProcessActionRepository import ProcessActionRepository

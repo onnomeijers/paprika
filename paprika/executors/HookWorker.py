@@ -1,6 +1,6 @@
 import json
 import time
-from paprika.connectors.DatasourceBuilder import DatasourceBuilder
+from paprika_connector.connectors.DatasourceBuilder import DatasourceBuilder
 from paprika.executors.ManagedWorker import ManagedWorker
 from paprika.processing.ProcessService import ProcessService
 from paprika.repositories.ChunkRepository import ChunkRepository
@@ -12,7 +12,7 @@ from paprika.system.logger.Logger import Logger
 from paprika.system.match.DictionaryMethod import DictionaryMethod
 from paprika.system.match.Matcher import Matcher
 from paprika.system.Traceback import Traceback
-from paprika.connectors.ConnectorFactory import ConnectorFactory
+from paprika_connector.connectors.ConnectorFactory import ConnectorFactory
 
 
 class HookWorker(ManagedWorker):

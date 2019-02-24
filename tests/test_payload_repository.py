@@ -1,6 +1,6 @@
 import unittest
-from paprika.connectors.DatasourceBuilder import DatasourceBuilder
-from paprika.connectors.ConnectorFactory import ConnectorFactory
+from paprika_connector.connectors.DatasourceBuilder import DatasourceBuilder
+from paprika_connector.connectors.ConnectorFactory import ConnectorFactory
 from paprika.repositories.PayloadRepository import PayloadRepository
 from paprika.repositories.HookRepository import HookRepository
 from paprika.threads.Claim import Claim

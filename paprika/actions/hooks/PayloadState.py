@@ -1,5 +1,5 @@
 import json
-from paprika.connectors.DatasourceBuilder import DatasourceBuilder
+from paprika_connector.connectors.DatasourceBuilder import DatasourceBuilder
 from paprika.repositories.ChunkRepository import ChunkRepository
 from paprika.repositories.PayloadRepository import PayloadRepository
 from paprika.repositories.ProcessActionPropertyRepository import ProcessActionPropertyRepository
@@ -7,7 +7,7 @@ from paprika.repositories.ProcessPropertyRepository import ProcessPropertyReposi
 from paprika.repositories.ProcessRepository import ProcessRepository
 from paprika.system.logger.Logger import Logger
 from paprika.actions.Actionable import Actionable
-from paprika.connectors.ConnectorFactory import ConnectorFactory
+from paprika_connector.connectors.ConnectorFactory import ConnectorFactory
 
 
 class PayloadState(Actionable):

@@ -1,7 +1,7 @@
 import time
 
 from paprika.actions.Actionable import Actionable
-from paprika.connectors.DatasourceBuilder import DatasourceBuilder
+from paprika_connector.connectors.DatasourceBuilder import DatasourceBuilder
 from paprika.repositories.Clang.ClangMailSummaryRepository import ClangMailSummaryRepository
 from paprika.repositories.ProcessActionPropertyRepository import ProcessActionPropertyRepository
 from paprika.system.MathHelper import MathHelper

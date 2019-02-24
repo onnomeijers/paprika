@@ -1,8 +1,8 @@
 from paprika.repositories.Repository import Repository
-from paprika.connectors.Helper import Helper
+from paprika_connector.connectors.Helper import Helper
 from paprika.system.logger.Logger import Logger
-from paprika.connectors.ConnectorFactory import ConnectorFactory
-from paprika.connectors.DatasourceBuilder import DatasourceBuilder
+from paprika_connector.connectors.ConnectorFactory import ConnectorFactory
+from paprika_connector.connectors.DatasourceBuilder import DatasourceBuilder
 
 
 class OracleScheduler(Repository):

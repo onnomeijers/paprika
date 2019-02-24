@@ -1,7 +1,7 @@
 import time
 from datetime import datetime
 from datetime import timedelta
-from paprika.connectors.DatasourceBuilder import DatasourceBuilder
+from paprika_connector.connectors.DatasourceBuilder import DatasourceBuilder
 from paprika.executors.ManagedWorker import ManagedWorker
 from paprika.processing.ProcessService import ProcessService
 from paprika.repositories.EventRepository import EventRepository
@@ -10,7 +10,7 @@ from paprika.repositories.ProcessPropertyRepository import ProcessPropertyReposi
 from paprika.repositories.ScheduledEventRepository import ScheduledEventRepository
 from paprika.system.logger.Logger import Logger
 from paprika.system.Traceback import Traceback
-from paprika.connectors.ConnectorFactory import ConnectorFactory
+from paprika_connector.connectors.ConnectorFactory import ConnectorFactory
 
 
 class EventWorker(ManagedWorker):

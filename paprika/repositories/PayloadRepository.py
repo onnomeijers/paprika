@@ -1,5 +1,5 @@
 from paprika.repositories.Repository import Repository
-from paprika.connectors.Helper import Helper
+from paprika_connector.connectors.Helper import Helper
 from paprika.system.ExpressionParser import ExpressionParser
 from paprika.system.JsonExt import JsonExt
 
