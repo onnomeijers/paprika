@@ -1,5 +1,5 @@
 import json
-from paprika.connectors.DatasourceBuilder import DatasourceBuilder
+from paprika_connector.connectors.DatasourceBuilder import DatasourceBuilder
 from paprika.consumers.Consumable import Consumable
 from paprika.messaging.Message import Message
 from paprika.repositories.ProcessActionPropertyRepository import ProcessActionPropertyRepository

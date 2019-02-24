@@ -1,11 +1,11 @@
 import time
-from paprika.connectors.DatasourceBuilder import DatasourceBuilder
+from paprika_connector.connectors.DatasourceBuilder import DatasourceBuilder
 from paprika.executors.MessageWorker import ManagedWorker
 from paprika.repositories.JobRepository import JobRepository
 from paprika.scrapers.StreamScraper import StreamScraper
 from paprika.system.logger.Logger import Logger
 from paprika.system.Traceback import Traceback
-from paprika.connectors.ConnectorFactory import ConnectorFactory
+from paprika_connector.connectors.ConnectorFactory import ConnectorFactory
 
 
 class StreamWorker(ManagedWorker):

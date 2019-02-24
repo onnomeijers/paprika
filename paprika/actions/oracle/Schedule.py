@@ -1,12 +1,12 @@
 from paprika.actions.Actionable import Actionable
-from paprika.connectors.DatasourceBuilder import DatasourceBuilder
+from paprika_connector.connectors.DatasourceBuilder import DatasourceBuilder
 from paprika.repositories.FileRepository import FileRepository
 from paprika.repositories.OracleScheduler import OracleScheduler
 from paprika.repositories.ProcessActionPropertyRepository import ProcessActionPropertyRepository
 from paprika.repositories.ProcessPropertyRepository import ProcessPropertyRepository
 from paprika.repositories.ProcessRepository import ProcessRepository
 from paprika.system.logger.Logger import Logger
-from paprika.connectors.ConnectorFactory import ConnectorFactory
+from paprika_connector.connectors.ConnectorFactory import ConnectorFactory
 from paprika.system.ExpressionParser import ExpressionParser
 from paprika.system.Strings import Strings
 import json

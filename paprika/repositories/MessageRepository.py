@@ -1,4 +1,4 @@
-from paprika.connectors.Helper import Helper
+from paprika_connector.connectors.Helper import Helper
 from paprika.repositories.Repository import Repository
 from paprika.system.Ora import Ora
 from datetime import datetime

@@ -70,7 +70,7 @@ setup(
     ],
     keywords='sample setuptools development',
     packages=find_packages(exclude=['doc', 'env', 'etc', 'images', 'opt', 'run', 'snippets', 'tests']),
-    install_requires=['cx_oracle', 'mysql-python', 'paramiko', 'requests', 'suds', 'filemagic', 'pysmbclient', 'hdfs'],
+    install_requires=['paramiko', 'requests', 'suds', 'filemagic', 'pysmbclient', 'hdfs', 'paprika-connector'],
     package_data={'paprika': ['*.json']},
     dependency_links=[],
     entry_points={

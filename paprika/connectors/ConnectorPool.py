@@ -1,6 +1,6 @@
 from threading import Condition
 from threading import Lock
-from paprika.connectors.ConnectorFactory import ConnectorFactory
+from paprika_connector.connectors.ConnectorFactory import ConnectorFactory
 
 
 class ConnectorPool(object):

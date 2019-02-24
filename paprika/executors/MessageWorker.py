@@ -4,8 +4,8 @@ from paprika.repositories.MessageRepository import MessageRepository
 from paprika.system.ClassLoader import ClassLoader
 from paprika.system.logger.Logger import Logger
 from paprika.system.Traceback import Traceback
-from paprika.connectors.ConnectorFactory import ConnectorFactory
-from paprika.connectors.DatasourceBuilder import DatasourceBuilder
+from paprika_connector.connectors.ConnectorFactory import ConnectorFactory
+from paprika_connector.connectors.DatasourceBuilder import DatasourceBuilder
 from paprika.repositories.JobRepository import JobRepository
 
 

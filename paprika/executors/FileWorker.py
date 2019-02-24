@@ -1,6 +1,6 @@
 import time
 import json
-from paprika.connectors.DatasourceBuilder import DatasourceBuilder
+from paprika_connector.connectors.DatasourceBuilder import DatasourceBuilder
 from paprika.executors.ManagedWorker import ManagedWorker
 from paprika.processing.ProcessService import ProcessService
 from paprika.repositories.FileRepository import FileRepository
@@ -13,7 +13,7 @@ from paprika.system.match.Matcher import Matcher
 from paprika.system.match.ReMethod import ReMethod
 from paprika.vfs.VfsFactory import VfsFactory
 from paprika.system.Traceback import Traceback
-from paprika.connectors.ConnectorFactory import ConnectorFactory
+from paprika_connector.connectors.ConnectorFactory import ConnectorFactory
 
 
 class FileWorker(ManagedWorker):
