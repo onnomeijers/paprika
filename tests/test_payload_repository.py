@@ -4,6 +4,7 @@ from paprika_connector.connectors.ConnectorFactory import ConnectorFactory
 from paprika.repositories.PayloadRepository import PayloadRepository
 from paprika.repositories.HookRepository import HookRepository
 from paprika.threads.Claim import Claim
+from paprika.repositories.DatasourceRepository import DatasourceRepository
 
 
 class TestPayloadRepository(unittest.TestCase):
@@ -28,8 +29,8 @@ class TestPayloadRepository(unittest.TestCase):
         print hook
 
         claim = Claim()
-
-        payload_ds = DatasourceBuilder.find(connector, hook['datasource'])
+        datasource_repository = DatasourceRepository(connector)
+        payload_ds = datasource_repository.get_by_name(hook['datasource'])
         payload_c = ConnectorFactory.create_connector(payload_ds)
         payload_repository = PayloadRepository(payload_c)
         #payload = payload_repository.dequeue(claim, hook)

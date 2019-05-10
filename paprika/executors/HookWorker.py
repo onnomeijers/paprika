@@ -13,6 +13,7 @@ from paprika.system.match.DictionaryMethod import DictionaryMethod
 from paprika.system.match.Matcher import Matcher
 from paprika.system.Traceback import Traceback
 from paprika_connector.connectors.ConnectorFactory import ConnectorFactory
+from paprika.repositories.DatasourceRepository import DatasourceRepository
 
 
 class HookWorker(ManagedWorker):
@@ -41,7 +42,8 @@ class HookWorker(ManagedWorker):
 
                 # retrieve the next payload
                 datasource = hook['datasource']
-                payload_ds = DatasourceBuilder.find(connector, datasource)
+                datasource_repository = DatasourceRepository(connector)
+                payload_ds = datasource_repository.get_by_name(datasource)
                 payload_c = ConnectorFactory.create_connector(payload_ds)
                 payload_repository = PayloadRepository(payload_c)
                 payload = payload_repository.dequeue(claim, hook)

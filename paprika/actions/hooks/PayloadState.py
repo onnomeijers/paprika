@@ -8,6 +8,7 @@ from paprika.repositories.ProcessRepository import ProcessRepository
 from paprika.system.logger.Logger import Logger
 from paprika.actions.Actionable import Actionable
 from paprika_connector.connectors.ConnectorFactory import ConnectorFactory
+from paprika.repositories.DatasourceRepository import DatasourceRepository
 
 
 class PayloadState(Actionable):
@@ -34,8 +35,8 @@ class PayloadState(Actionable):
         state = process_action_property_repository.get_property(process_action, 'state')
 
         # retrieve the datasource of the payload
-        datasource = chunk['datasource']
-        payload_ds = DatasourceBuilder.find(connector, datasource)
+        datasource_repository = DatasourceRepository(connector)
+        payload_ds = datasource_repository.get_by_name(chunk['datasource'])
         payload_c = ConnectorFactory.create_connector(payload_ds)
         payload_repository = PayloadRepository(payload_c)
 

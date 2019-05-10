@@ -5,6 +5,7 @@ from paprika.repositories.ProcessPropertyRepository import ProcessPropertyReposi
 from paprika.repositories.ProcessRepository import ProcessRepository
 from paprika.system.logger.Logger import Logger
 from paprika.actions.Actionable import Actionable
+from paprika.repositories.DatasourceRepository import DatasourceRepository
 
 
 class FileCsvStageAction(Actionable):
@@ -41,7 +42,8 @@ class FileCsvStageAction(Actionable):
             header = CsvFile.read_header(filename + '.utf8', delimiter)
             skip_header = True
 
-        ds = DatasourceBuilder.find(datasource)
+        datasource_repository = DatasourceRepository(connector)
+        ds = datasource_repository.get_by_name(datasource)
         connector = ConnectorFactory.create_connector(ds)
 
         file_repository = FileRepository(ds)

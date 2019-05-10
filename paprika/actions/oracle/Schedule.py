@@ -1,5 +1,4 @@
 from paprika.actions.Actionable import Actionable
-from paprika_connector.connectors.DatasourceBuilder import DatasourceBuilder
 from paprika.repositories.FileRepository import FileRepository
 from paprika.repositories.OracleScheduler import OracleScheduler
 from paprika.repositories.ProcessActionPropertyRepository import ProcessActionPropertyRepository
@@ -10,6 +9,7 @@ from paprika_connector.connectors.ConnectorFactory import ConnectorFactory
 from paprika.system.ExpressionParser import ExpressionParser
 from paprika.system.Strings import Strings
 import json
+from paprika.repositories.DatasourceRepository import DatasourceRepository
 
 
 class Schedule(Actionable):
@@ -40,7 +40,8 @@ class Schedule(Actionable):
             params = json.loads(params)
             params = ExpressionParser.parse(params, locals())
 
-        oracle_ds = DatasourceBuilder.find(connector, datasource)
+        datasource_repository = DatasourceRepository(connector)
+        oracle_ds = datasource_repository.get_by_name(datasource)
         oracle_c = ConnectorFactory.create_connector(oracle_ds)
         scheduler = OracleScheduler(oracle_c)
 

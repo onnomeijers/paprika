@@ -1,11 +1,11 @@
 from paprika.actions.Actionable import Actionable
-from paprika_connector.connectors.DatasourceBuilder import DatasourceBuilder
 from paprika.repositories.OracleScheduler import OracleScheduler
 from paprika.repositories.ProcessActionPropertyRepository import ProcessActionPropertyRepository
 from paprika.repositories.ProcessPropertyRepository import ProcessPropertyRepository
 from paprika.repositories.ProcessRepository import ProcessRepository
 from paprika.system.logger.Logger import Logger
 from paprika_connector.connectors.ConnectorFactory import ConnectorFactory
+from paprika.repositories.DatasourceRepository import DatasourceRepository
 
 
 class Monitor(Actionable):
@@ -25,7 +25,8 @@ class Monitor(Actionable):
         identifier = process_property_repository.get_property(process, 'identifier')
         datasource = process_action_property_repository.get_property(process_action, 'datasource')
 
-        oracle_ds = DatasourceBuilder.find(connector, datasource)
+        datasource_repository = DatasourceRepository(connector)
+        oracle_ds = datasource_repository.get_by_name(datasource)
         oracle_c = ConnectorFactory.create_connector(oracle_ds)
         scheduler = OracleScheduler(oracle_c)
 

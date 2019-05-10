@@ -1,5 +1,4 @@
 from paprika.actions.Actionable import Actionable
-from paprika_connector.connectors.DatasourceBuilder import DatasourceBuilder
 from paprika.repositories.ProcessActionPropertyRepository import ProcessActionPropertyRepository
 from paprika.repositories.ProcessPropertyRepository import ProcessPropertyRepository
 from paprika.repositories.ProcessRepository import ProcessRepository
@@ -8,6 +7,7 @@ from paprika_connector.connectors.ConnectorFactory import ConnectorFactory
 from paprika.repositories.OracleCall import OracleCall
 from paprika.system.ExpressionParser import ExpressionParser
 import json
+from paprika.repositories.DatasourceRepository import DatasourceRepository
 
 
 class Call(Actionable):
@@ -37,7 +37,8 @@ class Call(Actionable):
             params = json.loads(params)
             params = ExpressionParser.parse(params, locals())
 
-        oracle_ds = DatasourceBuilder.find(connector, datasource)
+        datasource_repository = DatasourceRepository(connector)
+        oracle_ds = datasource_repository.get_by_name(datasource)
         oracle_c = ConnectorFactory.create_connector(oracle_ds)
         oracle_call = OracleCall(oracle_c)
 

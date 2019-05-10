@@ -1,7 +1,6 @@
 import time
 
 from paprika.actions.Actionable import Actionable
-from paprika_connector.connectors.DatasourceBuilder import DatasourceBuilder
 from paprika.repositories.Clang.ClangMailSummaryRepository import ClangMailSummaryRepository
 from paprika.repositories.ProcessActionPropertyRepository import ProcessActionPropertyRepository
 from paprika.system.MathHelper import MathHelper
@@ -9,6 +8,7 @@ from paprika.system.Strings import Strings
 from paprika.system.logger.Logger import Logger
 
 from paprika.scrapers.Clang.Clang import Clang
+from paprika.repositories.DatasourceRepository import DatasourceRepository
 
 
 class MailSummaries(Actionable):
@@ -84,7 +84,8 @@ class MailSummaries(Actionable):
             mail_summaries.append(message)
 
         # delete all the mailings and insert the new ones.
-        mi_ds = DatasourceBuilder.find(datasource)
+        datasource_repository = DatasourceRepository(connector)
+        mi_ds = datasource_repository.get_by_name(datasource)
         clang_mail_summary_repository = ClangMailSummaryRepository(mi_ds)
         clang_mail_summary_repository.clean()
         for summary in mail_summaries:

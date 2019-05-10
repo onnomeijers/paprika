@@ -1,0 +1,30 @@
+{
+  "dev": {
+    "type": "mysql",
+    "host": "localhost",
+    "db": "paprika",
+    "username": "apple",
+    "password": "peer"
+  },
+  "test": {
+    "type": "mysql",
+    "host": "xxxxxx",
+    "db": "paprika_cloud",
+    "username": "apple",
+    "password": "peer"
+  },
+  "uat": {
+    "type": "mysql",
+    "host": "xxxxxx",
+    "db": "paprika_cloud",
+    "username": "apple",
+    "password": "peer"
+  },
+  "prod": {
+    "type": "mysql",
+    "host": "xxxxxx",
+    "db": "paprika_cloud",
+    "username": "apple",
+    "password": "peer"
+  }
+}
